@@ -1,0 +1,3 @@
+a) Primeiro, definimos a dor, depois, as relações das classes. Na hora do coding, primeiro criamos a classe do Produto, depois, a dos pedidos, que se relacionavam com os produtos, depois a do cliente, que se relacionava com os pedidos.
+b) Quando eu e o cliente concordamos que a abordagem estava alinhada para ambos.
+c) Teriamos que voltar a fase de requisitos para validar e assim, implementar a ideia
