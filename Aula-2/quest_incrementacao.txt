@@ -1,0 +1,2 @@
+a) Sim, a primeira entrega foi a questão de um carrinho funcional. Depois, um sistema de pagamento, que permitia o cliente pagar o carrinho.
+b) Sim, já que não precisamos voltar a fase de planejamento, apenas adicionar a mudança na próxima incrementação.

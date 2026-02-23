@@ -1,0 +1,3 @@
+a) Na incrementação, já que o cliente conseguia ver valor mais cedo.
+b) Na cascata, já que já temos o escopo geral da aplicação desde o começo.
+c) Depende do que será construido, se for um aplicativo já definido e com todos os requisitos definidos, seguir rigorosamente o modelo, agora, se for um produto que não é exatamente definido, incrementação.
