@@ -1,0 +1,100 @@
+EXERCICIOS TEORICOS - TESTES DE INTEGRACAO
+===========================================
+
+1. Sao testes que verificam se dois ou mais modulos funcionam corretamente
+   quando integrados. O objetivo e garantir que a comunicacao entre as partes
+   ocorra sem falhas.
+
+2. Teste unitario testa um metodo isolado, sem dependencias externas.
+   Teste de integracao testa dois ou mais modulos juntos, verificando a
+   comunicacao entre eles.
+
+3. Nao. Podem ser manuais ou automatizados. A automacao e mais rapida e
+   precisa, mas nao e a unica forma.
+
+4. Porque detectam falhas de comunicacao entre modulos que testes unitarios
+   nao conseguem identificar, garantindo que o sistema funcione como um todo.
+
+5. a) Perda de dados: dados corrompidos ou perdidos durante a comunicacao
+      entre modulos.
+   b) Resultados divergentes: o resultado da integracao difere do esperado
+      por erros de calculo ou dados incorretos.
+
+6. (1) Identificar os modulos a integrar
+   (2) Definir os cenarios de teste
+   (3) Criar os casos de teste (entrada e resultado esperado)
+   (4) Executar os testes
+   (5) Validar os resultados
+   (6) Documentar
+
+7. Vertical: testa a interacao entre diferentes camadas (Controller -> Service
+   -> Repository -> Banco).
+   Horizontal: testa modulos no mesmo nivel (PedidoService -> PagamentoService).
+
+8. Integracao vertical, pois o fluxo percorre camadas diferentes:
+   HTTP -> Controller -> Service -> Repository -> Banco.
+
+9. Testar se uma implementacao concreta (ex: PedidoRepository) respeita
+   corretamente o contrato definido por uma interface (ex: IPedidoRepository).
+
+10. Porque usam dependencias reais (banco, APIs) que sao mais lentas do que
+    os mocks dos testes unitarios, que rodam apenas em memoria.
+
+11. a) Integracao horizontal — ambos os servicos estao no mesmo nivel.
+    b) Passaria a ser integracao de sistemas se o PagamentoService fosse
+       uma API externa de terceiros.
+
+12. Integracao de sistemas, pois o sistema interno se comunica com um
+    sistema externo (API de pagamento).
+
+13. Garante que alteracoes no codigo nao quebraram funcionalidades que ja
+    funcionavam. E importante para detectar regressoes automaticamente
+    apos qualquer mudanca.
+
+14. Integracao de interfaces, pois verifica se PedidoRepository implementa
+    corretamente o contrato da interface IPedidoRepository.
+
+15. Porque sao mais lentos, complexos e custosos. Testes unitarios verificam
+    cada componente de forma rapida e isolada. Ambos devem ser usados juntos.
+
+16. (1) Modulos podem funcionar sozinhos mas falhar na integracao por
+        incompatibilidade de formato de dados.
+    (2) Problemas de contrato entre interfaces so aparecem na integracao real,
+        nao em testes unitarios com mocks.
+
+17. Integracao de servicos e um caso especifico de integracao de sistemas.
+    Todo teste entre servicos tambem e uma integracao de sistemas, mas
+    integracao de sistemas inclui outros componentes como bancos e ERPs
+    que nao sao servicos.
+
+18. Integracao vertical (HTTP -> banco percorre camadas diferentes) e
+    integracao de sistemas (chamada a API externa de pagamento).
+
+19. Mocks simulam dependencias reais (banco falso, API falsa).
+    Dependencias reais sao as efetivas (banco real, API real).
+    Mocks sao mais rapidos mas podem esconder problemas de integracao;
+    dependencias reais sao mais confiaveis porem mais lentas.
+
+20. (1) Execucao mais rapida
+    (2) Maior precisao — elimina erros humanos
+    (3) Facilidade de repeticao
+    (4) Melhor escalabilidade
+    (5) Reducao de custos a longo prazo
+
+21. Nao. Testes de integracao nao substituem unitarios. Cada tipo tem seu
+    papel e ambos sao necessarios para uma boa cobertura de qualidade.
+
+22. Porque pode falhar por razoes externas ao codigo: API fora do ar,
+    timeout de rede, mudancas na API sem aviso. Isso nao indica bug
+    no codigo do desenvolvedor.
+
+23. Camadas bem definidas tornam os pontos de integracao claros e faceis
+    de isolar, facilitando tanto a criacao dos testes quanto a substituicao
+    de dependencias por mocks quando necessario.
+
+24. Nao. Sao complementares. Unitarios testam logica isolada; de integracao
+    testam comunicacao entre componentes. Nenhum substitui o outro.
+
+25. Gerenciar dependencias externas (banco, APIs), pois tornam os testes
+    lentos e instáveis. Manter um ambiente de teste proximo ao de producao
+    e garantir a limpeza do estado entre os testes tambem sao desafios.
